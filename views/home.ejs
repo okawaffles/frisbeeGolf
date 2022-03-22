@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OkayuCDN Frisbee Golf Statistic Viewer</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="weathercheck">
+        <h3 id="opt">Today is <%=optimal%> for Frisbee Golfing</h3>
+        <h3 id="wdat">It's <%=degrees%>°F with <%=winds%> mph winds.</h3>
+        <h5 onclick="window.location.href = '/weather/58852'">Based on weather for <%=location%><br>Click for more weather info.</h5>
+    </div>
+    <hr>
+
+    <h2 class="latestGame" onclick="window.location.href = '/stats/games/<%=latest%>'">View Latest Game Stats (ID <%=latest%>)</h2>
+
+    <!-- keep last -->
+</body>
+</html>

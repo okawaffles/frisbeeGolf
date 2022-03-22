@@ -1,0 +1,86 @@
+@font-face {
+    font-family: KFhimajiMOCO;
+    src: url("./2.otf");
+}
+
+body {
+    background-color: #1d2126;
+    font-family: KFhimajiMOCO;
+}
+.weathercheck {
+    color: white;
+    font-family: KFhimajiMOCO;
+    width:fit-content;
+    text-align: center;
+    margin: 0 auto 0;
+}
+.latestGame {
+    color: white;
+    text-align: center;
+}
+
+.header {
+    display: inline;
+    color:white;
+    font-family: KFhimajiMOCO;
+    overflow: auto;
+    margin:auto;
+    text-align: left;   
+}
+.header h1 {
+    width: auto;
+    position: relative;
+}
+.header img {
+    width: auto;
+    float:left;
+    margin-right: 25px;
+}
+.return {
+    background-color: grey;
+    color: white;
+    float: right;
+    margin-top: -25px;
+    width: 10%;
+    height: 10%;
+}
+
+.condition img {
+    display: inline;
+    float:left;
+    margin-top: 10px;
+}
+.condition h1 {
+    float: left;
+    color: white;
+    font-size: 225%;
+}
+
+.weather {
+    margin: 10px;
+    margin-top: 150px;
+}
+.weather h1 {
+    color: white;
+    font-size: 250%;
+}
+
+
+
+footer {
+    position: fixed;
+    width: 100%;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    text-decoration: none;
+}
+
+.player {
+    color: white;
+}
+
+.headersplit {
+    height: 5px;
+    fill: white;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather | OkayuCDN</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Current Weather for <%=location%><br>Last updated at <%=lastUpd%></h1>
+    </div>
+    <hr>
+    <div class="condition">
+        <img class="icon", src="https:<%=icon%>" />
+        <h1><%=condition%></h1>
+    </div>
+    <div class="weather">
+        <h1>Temperature : <%=deg%>°F</h1>
+        <h1>Wind : <%=wind%> mph <%=windDir%></h1>
+        <h1>Humidity : <%=humidity%>%</h1>
+    </div>
+
+
+    <!-- keep last -->
+    <footer>
+        Powered by <a style="text-decoration: none; color: white;" class="weatherapi" href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a>
+    </footer>
+</body>
+</html>

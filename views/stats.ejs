@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics for Game ID <%=id%></title>
+    <link rel="stylesheet" href="../../stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Statistics<br>Game <%=id%></h1>
+        <button class="return" onclick="window.location.href = '../../'">Return</button>
+    </div>
+    <hr class="headersplit">
+
+    <div class="players">
+        <div class="player">
+            <h1>No Player</h1>
+            <h3>Hole Scores: <%=comboHoleScoresA%></h3>
+            <h3>Total: <%=totalScoreA%></h3>
+            <hr>
+        </div>
+        <div class="player">
+            <h1>No Player</h1>
+            <h3>Hole Scores: <%=comboHoleScoresB%></h3>
+            <h3>Total: <%=totalScoreB%></h3>
+            <hr>
+        </div>
+        <div class="player">
+            <h1>No Player</h1>
+            <h3>Hole Scores: <%=comboHoleScoresC%></h3>
+            <h3>Total: <%=totalScoreC%></h3>
+            <hr>
+        </div>
+        <div class="player">
+            <h1>No Player</h1>
+            <h3>Hole Scores: <%=comboHoleScoresD%></h3>
+            <h3>Total: <%=totalScoreD%></h3>
+            <hr>
+        </div>
+        <div class="player">
+            <h1>No Player</h1>
+            <h3>Hole Scores: <%=comboHoleScoresE%></h3>
+            <h3>Total: <%=totalScoreE%></h3>
+            <hr>
+        </div>
+    </div>
+
+    <!-- keep last ... REMEMBER TO CHANGE!! -->
+    <!-- this script manages how many players are shown -->
+    <script>
+        let id = window.href.location.split('/')[5];
+        let stats;
+        $.getJSON('localhost:3000/db/games/' + id, function(result){
+            stats = result;
+        })
+    </script>
+</body>
+</html>

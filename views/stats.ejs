@@ -17,31 +17,31 @@
 
     <div class="players">
         <div class="player">
-            <h1>No Player</h1>
+            <h1><%=playerA%></h1>
             <h3>Hole Scores: <%=comboHoleScoresA%></h3>
             <h3>Total: <%=totalScoreA%></h3>
             <hr>
         </div>
-        <div class="player">
-            <h1>No Player</h1>
+        <div class="playerB">
+            <h1><%=playerB%></h1>
             <h3>Hole Scores: <%=comboHoleScoresB%></h3>
             <h3>Total: <%=totalScoreB%></h3>
             <hr>
         </div>
-        <div class="player">
-            <h1>No Player</h1>
+        <div class="playerC">
+            <h1><%=playerC%></h1>
             <h3>Hole Scores: <%=comboHoleScoresC%></h3>
             <h3>Total: <%=totalScoreC%></h3>
             <hr>
         </div>
-        <div class="player">
-            <h1>No Player</h1>
+        <div class="playerD">
+            <h1><%=playerD%></h1>
             <h3>Hole Scores: <%=comboHoleScoresD%></h3>
             <h3>Total: <%=totalScoreD%></h3>
             <hr>
         </div>
-        <div class="player">
-            <h1>No Player</h1>
+        <div class="playerE">
+            <h1><%=playerE%></h1>
             <h3>Hole Scores: <%=comboHoleScoresE%></h3>
             <h3>Total: <%=totalScoreE%></h3>
             <hr>
@@ -51,10 +51,13 @@
     <!-- keep last ... REMEMBER TO CHANGE!! -->
     <!-- this script manages how many players are shown -->
     <script>
-        let id = window.href.location.split('/')[5];
+        let id = location.href.split('/')[5];
         let stats;
         $.getJSON('localhost:3000/db/games/' + id, function(result){
             stats = result;
+            /*if(!stats.playerE) {
+                document.getElementById("playerE").remove();
+            }*/
         })
     </script>
 </body>

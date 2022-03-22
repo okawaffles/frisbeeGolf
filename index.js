@@ -112,6 +112,11 @@ app.get('/stats/games/*', (req, res) => {
     res.render('stats.ejs', {
         "id":id,
         "stats":stats,
+        "playerA":stats.playerA.name,
+        "playerB":stats.playerB.name,
+        "playerC":stats.playerC.name,
+        "playerD":stats.playerD.name,
+        "playerE":stats.playerE.name,
         "comboHoleScoresA":chsA,
         "comboHoleScoresB":chsB,
         "comboHoleScoresC":chsC,

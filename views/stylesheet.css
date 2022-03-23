@@ -84,3 +84,19 @@ footer {
     height: 5px;
     fill: white;
 }
+
+
+/* generator */
+.scoregenform input{
+    background-color: gray;
+    color: white;
+}
+.scoregenform input::placeholder {
+    color: white;
+}
+.submitJSON {
+    text-align: center;
+    width: 25%;
+    height: 5%;
+    margin-left: 37.5%;
+}

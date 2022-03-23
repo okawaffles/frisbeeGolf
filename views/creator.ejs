@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frisbee Golf Game JSON Auto-Generator</title>
+    <link rel="stylesheet" href="../../stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>OkayuCDN Manager<br>Frisbee Golf Game JSON Auto-Generator</h1>
+        <button class="return" onclick="window.location.href = '../../'">Return</button>
+    </div>
+    <hr class="headersplit">
+
+    <form class="scoregenform" method="POST" action="/api/createJSON">
+        <div class="players">
+            <div class="player">
+                <h1>playerA</h1><input type="text" placeholder="Player Name" id="namA">
+                <div class="gen_scores">
+                    <br><br>
+                    <input type="text" placeholder="Hole 1" id="A1">
+                    <input type="text" placeholder="Hole 2" id="A2">
+                    <input type="text" placeholder="Hole 3" id="A3">
+                    <input type="text" placeholder="Hole 4" id="A4">
+                    <input type="text" placeholder="Hole 5" id="A5">
+                    <input type="text" placeholder="Hole 6" id="A6">
+                    <input type="text" placeholder="Hole 7" id="A7">
+                    <input type="text" placeholder="Hole 8" id="A8">
+                    <input type="text" placeholder="Hole 9" id="A9">
+                </div>
+                <hr>
+            </div>
+            <div class="playerB">
+                <h1>playerB</h1><input type="text" placeholder="Player Name" id="namB">
+                <div class="gen_scores">
+                    <br><br>
+                    <input type="text" placeholder="Hole 1" id="B1">
+                    <input type="text" placeholder="Hole 2" id="B2">
+                    <input type="text" placeholder="Hole 3" id="B3">
+                    <input type="text" placeholder="Hole 4" id="B4">
+                    <input type="text" placeholder="Hole 5" id="B5">
+                    <input type="text" placeholder="Hole 6" id="B6">
+                    <input type="text" placeholder="Hole 7" id="B7">
+                    <input type="text" placeholder="Hole 8" id="B8">
+                    <input type="text" placeholder="Hole 9" id="B9">
+                </div>
+                <hr>
+            </div>
+            <div class="playerC">
+                <h1>playerC</h1><input type="text" placeholder="Player Name" id="namC">
+                <div class="gen_scores">
+                    <br><br>
+                    <input type="text" placeholder="Hole 1" id="C1">
+                    <input type="text" placeholder="Hole 2" id="C2">
+                    <input type="text" placeholder="Hole 3" id="C3">
+                    <input type="text" placeholder="Hole 4" id="C4">
+                    <input type="text" placeholder="Hole 5" id="C5">
+                    <input type="text" placeholder="Hole 6" id="C6">
+                    <input type="text" placeholder="Hole 7" id="C7">
+                    <input type="text" placeholder="Hole 8" id="C8">
+                    <input type="text" placeholder="Hole 9" id="C9">
+                </div>
+                <hr>
+            </div>
+            <div class="playerD">
+                <h1>playerD</h1><input type="text" placeholder="Player Name" id="namD">
+                <div class="gen_scores">
+                    <br><br>
+                    <input type="text" placeholder="Hole 1" id="D1">
+                    <input type="text" placeholder="Hole 2" id="D2">
+                    <input type="text" placeholder="Hole 3" id="D3">
+                    <input type="text" placeholder="Hole 4" id="D4">
+                    <input type="text" placeholder="Hole 5" id="D5">
+                    <input type="text" placeholder="Hole 6" id="D6">
+                    <input type="text" placeholder="Hole 7" id="D7">
+                    <input type="text" placeholder="Hole 8" id="D8">
+                    <input type="text" placeholder="Hole 9" id="D9">
+                </div>
+                <hr>
+            </div>
+            <div class="playerE">
+                <h1>playerE</h1><input type="text" placeholder="Player Name" id="namE">
+                <div class="gen_scores">
+                    <br><br>
+                    <input type="text" placeholder="Hole 1" id="E1">
+                    <input type="text" placeholder="Hole 2" id="E2">
+                    <input type="text" placeholder="Hole 3" id="E3">
+                    <input type="text" placeholder="Hole 4" id="E4">
+                    <input type="text" placeholder="Hole 5" id="E5">
+                    <input type="text" placeholder="Hole 6" id="E6">
+                    <input type="text" placeholder="Hole 7" id="E7">
+                    <input type="text" placeholder="Hole 8" id="E8">
+                    <input type="text" placeholder="Hole 9" id="E9">
+                </div>
+                <hr>
+                <input class="submitJSON" type="submit" value="Generate and Upload">
+            </div>
+        </div>
+    </form>
+
+    <!-- keep last ... REMEMBER TO CHANGE!! -->
+</body>
+</html>

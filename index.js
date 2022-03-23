@@ -84,23 +84,33 @@ app.get('/stats/games/*', (req, res) => {
     // create combo strings
     let chsA,chsB,chsC,chsD,chsE;
     let totA,totB,totC,totD,totE;
+    let namA;
+    let namB = "No Player";
+    let namC = "No Player";
+    let namD = "No Player";
+    let namE = "No Player";
     chsA = stats.playerA["1"];
     totA = stats.playerA.total;
+    namA = stats.playerA.name;
     if (stats.playerB) {
         chsB = stats.playerB["1"];
         totB = stats.playerB.total;
+        namB = stats.playerB.name;
     }
     if (stats.playerC) {
         chsC = stats.playerC["1"];
         totC = stats.playerC.total;
+        namC = stats.playerC.name;
     }
     if (stats.playerD) {
         chsD = stats.playerD["1"];
         totD = stats.playerD.total;
+        namD = stats.playerD.name;
     }
     if (stats.playerE) {
         chsE = stats.playerE["1"];
         totE = stats.playerE.total;
+        namE = stats.playerE.name;
     }
     for(let i = 1; i < 9; i++) {
         chsA = `${chsA},${stats.playerA[i.toString()]}`
@@ -112,11 +122,11 @@ app.get('/stats/games/*', (req, res) => {
     res.render('stats.ejs', {
         "id":id,
         "stats":stats,
-        "playerA":stats.playerA.name,
-        "playerB":stats.playerB.name,
-        "playerC":stats.playerC.name,
-        "playerD":stats.playerD.name,
-        "playerE":stats.playerE.name,
+        "playerA":namA,
+        "playerB":namB,
+        "playerC":namC,
+        "playerD":namD,
+        "playerE":namE,
         "comboHoleScoresA":chsA,
         "comboHoleScoresB":chsB,
         "comboHoleScoresC":chsC,
@@ -133,6 +143,10 @@ app.get('/api/game/*', (req, res) => {
     let id = req.url.split('/')[3];
     let stats = JSON.parse(fs.readFileSync(`./db/games/${id}/scores.json`));
     res.json(stats);
+})
+
+app.get('/manage/create', (req, res) => {
+    res.render('creator.ejs', {});
 })
 
 app.listen(3000);

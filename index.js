@@ -246,4 +246,4 @@ app.get('/api/stats/games/*', (req, res) => {
     res.json(JSON.parse(fs.readFileSync(`./db/games/${id}/scores.json`)));
 })
 
-exports.app = app;
+app.listen(80);
